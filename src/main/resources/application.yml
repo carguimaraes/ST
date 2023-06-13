@@ -12,13 +12,8 @@ server:
       context-path: /service-track
 
 
- 
-
 spring:
-  
   profiles.active: dev
-
- 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
@@ -28,6 +23,12 @@ spring:
     hibernate:
       ddl-auto: update
   
+
+seguranca:
+   jwtSECRET: "SOL-VIOLAO-PRAIA"
+   
+
+
 
 
  
