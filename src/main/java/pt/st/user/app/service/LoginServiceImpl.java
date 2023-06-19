@@ -1,12 +1,14 @@
 package pt.st.user.app.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import pt.st.infra.exception.FalhaAutenticacaoException;
 import pt.st.infra.security.TsTokenService;
 import pt.st.user.app.model.LoginRequest;
 import pt.st.user.app.model.LoginResponse;
 
+@Service
 public class LoginServiceImpl implements  LoginService{
 	
 	@Autowired

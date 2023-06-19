@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
+@Service
 public class TokenJWTService implements TsTokenService{
 	
 	
