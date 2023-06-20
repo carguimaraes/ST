@@ -27,7 +27,12 @@ public class LoginServiceImpl implements  LoginService{
 			throw new FalhaAutenticacaoException(new String[] {"CMensagensUtil.MSG_FALHA_AUTENTICACAO_USUARIO_OU_SENHA_INVALIDO"});
 		}
 		
-		autenticacaoService.autenticar(login.getUsername(), login.getPassword() );
+		boolean isAut=autenticacaoService.autenticar(login.getUsername(), login.getPassword() );
+		
+		if(!isAut ) {
+			throw new FalhaAutenticacaoException(new String[] {"CMensagensUtil.MSG_FALHA_AUTENTICACAO_USUARIO_OU_SENHA_INVALIDO"});
+		}
+		
 		
 		LoginResponse loginResponse = new LoginResponse();
 			 
